@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <React.Fragment>
+      {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
+      <h1 className="text-[#9e78cf] mt-5 font-bold text-[2rem] text-center">
+        Todo App
+      </h1>
+      <div className="text-center mt-8 ">
+        <input
+          type="text"
+          placeholder="Add a new Task"
+          className="border-[#9E78CF] border-2  rounded-xl  sm:w-[25rem] w-[70%] p-2 outline-none bg-[#0D0714] text-white"
+        />
+        <button className="bg-[#9E78CF] ml-2 rounded-lg pl-3 pr-3 pb-2 pt-1 text-white text-[1.5rem]">
+          +
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <p className="text-white mt-5  sm:mr-[23rem] mr-[60%]">Tasks to do</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div></div>
+    </React.Fragment>
+  );
 }
 
-export default App
+export default App;
